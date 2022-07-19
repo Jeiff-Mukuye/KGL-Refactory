@@ -1,0 +1,54 @@
+doctype html
+//if lt IE 7
+//if IE 7
+//if IE 8
+//if gt IE 8
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  title KGL cash sales report
+  meta(name='description' content='')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+// Navigation section
+nav
+  ul
+    li
+      a(href='./dashtemp.html') Dashboard
+    li
+      a(href='/creditsales') Credit Form
+    li
+      a(href='/cashsales') Cash Sales Form
+    li
+      a(href='/procurement') Admin
+    li
+      a(href='') Reports
+table 
+    thead 
+    tr 
+        th Produce 
+        th Amount 
+        th Tonnage 
+        th Date 
+        th Buyer 
+        th Agent 
+    tbody 
+        if cashsales.length 
+        each cashsale in cashsales 
+            tr 
+                td #{cashsale.prodname}
+                td #{cashsale.amountpaid}
+                td #{cashsale.tonnage}
+                td #{cashsale.date}
+                td #{cashsale.buyername}
+                td #{cashsale.agentname}
+                
+         
+
+// Footer section
+//
+  <div class="main-footer">
+  <p>Developed by Jeiff</p>
+  </div>
+script(src='' async='' defer='')

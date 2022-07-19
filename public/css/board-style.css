@@ -1,0 +1,152 @@
+.container-fluid{
+    height: 100%;
+
+}
+
+.container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #EAE6DA;
+    border-radius: 5px;
+    border: solid 2px black;
+  }
+
+.col-sm-10 {
+    border: solid 2px yellow;   
+    margin-left: 240px; 
+    margin-right: 0;
+}
+
+
+/*--------------
+Sidbar container design and main background color
+------------------*/
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #EAE6DA; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #EAE6DA, #EAE6DA);
+    background: -moz-linear-gradient(right, #EAE6DA, #EAE6DA);
+    background: -o-linear-gradient(right, #EAE6DA, #EAE6DA);
+    background: linear-gradient(to left, #EAE6DA, #EAE6DA);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+  }
+
+.wrapper .sidebar{
+    background: #56C6A9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+/*------------------------
+Avatar styling
+---------------------------*/
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+    
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ecf39e;
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.wrapper .sidebar .profile h2{
+    color: #ecf39e;
+    font-size: 26px;
+}
+
+/*--------------------------
+Design menu items
+--------------------------*/
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 15px;
+    border-radius: 5px;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+    
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+    
+}
+
+ /*------no need for active link------*/
+.wrapper .sidebar ul li a:hover{
+    color: #ecf39e;
+    list-style: none;
+    text-decoration: none;
+    background:#006B54;
+    /*border-right: 2px solid rgb(5, 68, 104);*/
+}
+
+.wrapper .sidebar ul li a:hover .icon{
+    color: #F0EDE5;
+    text-decoration: none;
+}
+
+.wrapper .sidebar ul li a:hover:before{
+    display: block;
+}
+
+/*-------------------------
+copyright
+----------------------------*/
+.sidebar p{
+    font-weight: 100;
+    font-size: 14px;
+    color: #848488;
+    border-top: solid 1px #BCBCBE;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    margin-left: 7px;
+}
+
+/*-------------------------
+footer
+----------------------------*/
+.main-footer{
+    border-bottom: solid 1px #BCBCBE;
+    color: #848488;
+    position: relative;
+    margin-left: 225px;
+       
+}
+
+.main-footer p{
+    text-align: center;
+    margin-bottom: 0;
+}

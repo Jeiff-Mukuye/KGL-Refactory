@@ -1,0 +1,80 @@
+doctype html
+//if lt IE 7
+//if IE 7
+//if IE 8
+//if gt IE 8
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  title KGL credit sales form
+  meta(name='description' content='')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+// Navigation section
+nav
+  ul
+    li
+      a(href='./dashtemp.html') Dashboard
+    li
+      a(href='/creditsales') Credit Form
+    li
+      a(href='/cashsales') Cash Sales Form
+    li
+      a(href='/procurement') Admin
+    li
+      a(href='') Reports
+// form section
+.container
+  form.structure(action='/creditsales' method='POST')
+    .form-head.col-md-12
+      h1
+        | KGL
+        br
+        | CREDIT SALE
+    // Section one
+    .form-row
+      .form-group.col-md-3
+        //- label(for='inputbuyername') Name of Buyer
+        input#inputbuyername.form-control(type='text' name='buyername' placeholder='Enter name of Buyer')
+      .form-group.col-md-3
+        //- label(for='inputnin') National ID number
+        input#inputnin.form-control(type='text' name='nin' placeholder='Enter NIN')
+      .form-group.col-md-3
+        //- label(for='inputlocation') Location
+        input#inputlocation.form-control(type='text' name='location' placeholder='Enter Address of buyer')
+      .form-group.col-md-3
+        //- label(for='inputbuyercontact') Buyer Contact
+        input#inputbuyercontact.form-control(type='number' name='buyercontact' placeholder='Enter Buyer Contact')
+    // Section two
+    .form-row
+      .form-group.col-md-3
+        //- label(for='inputamountdue') Amount Due
+        input#inputamountdue.form-control(type='number' name='amountdue' placeholder='Enter Amount Due')
+      .form-group.col-md-3
+        //- label(for='inputduedate') Due Date
+        input#inputduedate.form-control(type='date' name='duedate' placeholder='Enter Due Date')
+      .form-group.col-md-3
+        //- label(for='inputprodname') Item Name
+        input#inputprodname.form-control(type='text' name='prodname' placeholder='Enter name of Item')
+      .form-group.col-md-3
+        //- label(for='inputprodtype') Item Type
+        input#inputprodtype.form-control(type='text' name='prodtype' placeholder='Enter Type of Item')
+    // Section three
+    .form-row
+      .form-group.col-md-4
+        //- label(for='inputtonnage') Weight in Kilograms
+        input#inputtonnage.form-control(type='number' name='tonnage' placeholder='Enter kgs of produce')
+      .form-group.col-md-4
+        //- label(for='inputdispatchdate') Dispatch Date
+        input#inputdispatchdate.form-control(type='date' name='dispatchdate' placeholder='')
+      .form-group.col-md-4
+        //- label(for='inputsaleagentname') Sales Agents Name
+        input#inputsaleagentname.form-control(type='text' name='agentname' placeholder='Enter Name of Sale Agent')
+      button.btn(type='submit') Add Credit Sale
+// Footer section
+//
+  <div class="main-footer">
+  <p>Developed by Jeiff</p>
+  </div>
+script(src='' async='' defer='')

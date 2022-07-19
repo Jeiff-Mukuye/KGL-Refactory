@@ -1,0 +1,33 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #EAE6DA;
+    border-radius: 5px;
+  }
+
+  .structure{
+    padding: 10px;
+  }
+  
+  .form-head{
+    color: #BCBCBE;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+  }
+
+  button{
+    background-color: #56C6A9;
+    
+  }
+
+  button:hover{
+    background-color: #006B54;
+    color: #ecf39e;
+  }
+
+
+  

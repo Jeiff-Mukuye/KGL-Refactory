@@ -1,0 +1,99 @@
+/* -----------------------------------
+Global Css
+----------------------------------- */
+*{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+/* -----------------------------------
+Navbar Css
+----------------------------------- */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #04AA6D;
+}
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #04AA6D;
+    
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #006B54;
+    text-decoration: none;
+    color: #fff;
+  }
+
+/* -----------------------------------
+Form Css
+----------------------------------- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #EAE6DA;
+    border-radius: 5px;
+  }
+
+  .structure{
+    padding: 10px;
+  }
+  
+  .form-head{
+    color: #BCBCBE;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+  }
+
+  /* input[type=text] {
+    padding: 8px 30px;
+   
+  } */
+
+  /* #erroname{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+  } */
+   
+
+  button{
+    background-color: #56C6A9;
+    color: rgb(85, 83, 83);
+    
+  }
+
+  button:hover{
+    background-color: #006B54;
+    color: #ecf39e;
+  }
+/* -----------------------------------
+Footer Css
+----------------------------------- */
+/* .main-footer {
+    background-color: #EAE6DA;
+    position: fixed;
+    margin-bottom: 0;
+    
+}
+
+.main-footer p{
+    text-align: center;
+    border-top: solid 2px #006B54 ;
+} */
+  
