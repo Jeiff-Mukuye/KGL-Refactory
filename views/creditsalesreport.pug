@@ -36,8 +36,6 @@ nav
         th(scope='col') Date
         th(scope='col') Buyer
         th(scope='col') Agent
-        th(scope='col') Action
-        th(scope='col') Action
     tbody 
         if cashsales.length 
         each cashsale in cashsales 
@@ -48,14 +46,4 @@ nav
                 td #{cashsale.date}
                 td #{cashsale.buyername}
                 td #{cashsale.agentname}
-                td 
-                  form(method='get' action='/deletecashsale/'+cashsale._id)
-                    console.log(#{cashsale._id})
-                    input(type="hidden" name="delete" value=cashsale._id)
-                    button.btn.btn-danger(type="submit" ) Delete 
-                      //- i.bi.bi-trash(style="color:white;")
-                td 
-                  a(href='/updatecashsale/'+cashsale._id)
-                  button.btn.btn-primary Update
-                  
 script(src='' async='' defer='')

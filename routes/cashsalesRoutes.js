@@ -1,4 +1,6 @@
+const { query } = require('express');
 const express = require('express');
+const { findOneAndUpdate } = require('../models/CashSalesModal');
 const router = express.Router();
 const Cashsales = require('../models/CashSalesModal');
 
@@ -32,6 +34,28 @@ router.get('/cashsalesreports', async (req,res) =>{
         error
     })
 }
+// Function for deletion
+router.get('/deletecashsale/:id', async (req,res) =>{
+    try{
+        await Cashsales.deleteOne({
+            _id: req.params.id
+        })
+        res.redirect('back')
+    } catch(error){
+        res.status(400).send('could not delete cash sale')
+    }
+})
+
+// Function for updating
+router.post('/updatecashsale/', async(req,res) =>{
+    try{
+        const updated = await cashsales.findOneAndUpdate({_id: req.query.id}, req.body)
+        res.redirect('/cashsalesreport');
+    }catch(error){
+        res.status(400).send('unable to update cashsale')
+    }
+} )
+
 });
 
 
