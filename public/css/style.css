@@ -95,6 +95,7 @@ Dashboard Css
   margin-left: 30px;
   margin-right: 30px;
   border-radius: 10px; 
+  font-size: small;
   
   
 }
@@ -106,6 +107,13 @@ Dashboard Css
   margin-top: 10px;
   
   
+}
+/* Report buttons */
+button.btn.btn-danger{
+  font-size: small;
+}
+button.btn.btn-primary{
+  font-size: small;
 }
 
 a.btn.btn-primary{
