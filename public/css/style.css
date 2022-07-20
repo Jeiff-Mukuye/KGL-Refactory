@@ -5,6 +5,7 @@ Global Css
     
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
+    
 }
 /* -----------------------------------
 Navbar Css
@@ -14,7 +15,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #04AA6D;
+    background-color: #4ec47b;
 }
   
   li {
@@ -28,7 +29,7 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #04AA6D;
+    background-color: #4ec47b;
     
   }
   
@@ -73,15 +74,48 @@ Form Css
    
 
   button{
-    background-color: #56C6A9;
+    background-color: #4ec47b;
     color: rgb(85, 83, 83);
     
   }
 
   button:hover{
-    background-color: #006B54;
+    background-color: #23723d;
     color: #ecf39e;
   }
+
+
+
+    /* -----------------------------------
+Dashboard Css
+----------------------------------- */
+.dash-container{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 10px; 
+  
+  
+}
+
+.card {
+  float: left;
+  margin-right: 0px;
+  margin-left: 30px;
+  margin-top: 10px;
+  
+  
+}
+
+a.btn.btn-primary{
+  background-color: #4ec47b;
+  border: 0;
+}
+a.btn.btn-primary:hover{
+  background-color: #23723d;
+  color: #ecf39e;;
+}
 /* -----------------------------------
 Footer Css
 ----------------------------------- */

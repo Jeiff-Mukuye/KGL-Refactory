@@ -4,7 +4,7 @@ const router = express.Router();
 
 // direct the browser to page
 router.get('/dashboard', (req,res) => {
-    res.render('')
+    res.render('dashboard')
 })
 
 // always keep at the bottom of this file

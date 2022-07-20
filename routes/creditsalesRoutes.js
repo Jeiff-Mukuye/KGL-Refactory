@@ -20,6 +20,34 @@ router.post('/creditsales', async (req,res) =>  {
     }
 })
 
+//creating route to fetch the credit sales
+router.get('/creditsalesreports', async(req,res) =>{
+    try {
+        const data = await Creditsales.find({});
+        res.render('creditsalesreport', {Creditsales:data});
+    }
+    catch (error) {
+        return res.status(400).send({
+            status:400,
+            message:'Failed to fetch credit sales',
+            error
+        })
+
+    }
+// Function for deletion
+router.get('/deletecreditsale/:id', async (req,res) =>{
+    try{
+        await Creditsales.deleteOne({
+            _id: req.params.id
+        })
+        res.redirect('back')
+    } catch(error){
+        res.status(400).send('could not delete credit sale')
+    }
+})
+    
+
+})
 
 // always keep at the bottom of this file
 module.exports = router;

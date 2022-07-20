@@ -7,7 +7,7 @@ doctype html
 head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  title KGL Cash Sales Report
+  title KGL Credit Sales Report
   meta(name='description' content='')
   meta(name='viewport' content='width=device-width, initial-scale=1')
   link(rel='stylesheet' href='/css/style.css')
@@ -16,7 +16,7 @@ head
 nav
   ul
     li
-      a(href='./dashtemp.html') Dashboard
+      a(href='/dashboard') Dashboard
     li
       a(href='./procred-form.html') Credit Form
     li
@@ -30,20 +30,44 @@ nav
   table.table.table-sm
     thead
       tr
-        th(scope='col') Item
-        th(scope='col') Amount
-        th(scope='col') Tonnage
-        th(scope='col') Date
         th(scope='col') Buyer
+        th(scope='col') NIN
+        th(scope='col') Location
+        th(scope='col') Contact
+        th(scope='col') Amount Due
+        th(scope='col') Due Date
+        th(scope='col') Product  
+        th(scope='col') Product Type
+        th(scope='col') Tonnage 
+        th(scope='col') Dispatch Date 
         th(scope='col') Agent
+        th(scope='col') Action
+        th(scope='col') Action
     tbody 
-        if cashsales.length 
-        each cashsale in cashsales 
+        if creditsales.length 
+        each creditsale in creditsales 
             tr 
-                td #{cashsale.prodname}
-                td #{cashsale.amountpaid}
-                td #{cashsale.tonnage}
-                td #{cashsale.date}
-                td #{cashsale.buyername}
-                td #{cashsale.agentname}
+                td #{creditsale.buyername}
+                td #{creditsale.nin}
+                td #{creditsale.location}
+                td #{creditsale.buyercontact}
+                td #{creditsale.amountdue}
+                td #{creditsale.duedate}
+                td #{creditsale.prodname}
+                td #{creditsale.prodtype}
+                td #{creditsale.tonnage}
+                td #{creditsale.dispatchdate}
+                td #{creditsale.agentname}
+                
+                
+                td 
+                  form(method='get' action='/deletecreditsale/'+creditsale._id)
+                    console.log(#{cashsale._id})
+                    input(type="hidden" name="delete" value=creditsale._id)
+                    button.btn.btn-danger(type="submit" ) Delete 
+                      //- i.bi.bi-trash(style="color:white;")
+                td 
+                  a(href='/updatecreditsale/'+creditsale._id)
+                  button.btn.btn-primary Update
+                  
 script(src='' async='' defer='')
