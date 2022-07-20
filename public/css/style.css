@@ -116,13 +116,23 @@ button.btn.btn-primary{
   font-size: small;
 }
 
+/* Success message button */
+.btn{
+  margin-left: 45%;
+  
+}
+.btn:hover{
+  color: #ecf39e;
+  
+}
+
 a.btn.btn-primary{
   background-color: #4ec47b;
   border: 0;
 }
 a.btn.btn-primary:hover{
   background-color: #23723d;
-  color: #ecf39e;;
+  color: #ecf39e;
 }
 /* -----------------------------------
 Footer Css

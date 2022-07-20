@@ -20,10 +20,10 @@ nav
       a(href='/creditsales') Credit Form
     li
       a(href='/cashsales') Cash Sales Form
-    li
-      a(href='/procurement') Admin
-    li
-      a(href='/cashsalesreports') Reports
+    //- li
+    //-   a(href='/procurement') Admin
+    //- li
+    //-   a(href='/cashsalesreports') Reports
 // form section
 #demo.container
   form.structure(action='/cashsales' method='POST')
@@ -37,8 +37,8 @@ nav
       .form-group.col-md-6
         //- label(for='inputprodname') Name of Item
         input#inputprodame.form-control(type='text' name='prodname' placeholder='Enter Name of Item' onblur='prodNameVal(2, this, errorname)')
-        br
-        span#errorname 
+        //- br
+        //- span#errorname 
       .form-group.col-md-6
         //- label(for='inputamountpaid') Amount Paid
         input#inputamountpaid.form-control(type='number' name='amountpaid' placeholder='Enter Amount Paid' onblur='amountPaidVal(2, this, errorname)')
@@ -47,7 +47,7 @@ nav
         input#inputtonnage.form-control(type='number' name='tonnage' placeholder='Enter kgs of produce')
       .form-group.col-md-6
         //- label(for='inputdatentime') Date &amp; Time of sale
-        input#inputdatentime.form-control(type='datetime-local' name='date' placeholder='')
+        input#inputdatentime.form-control(type='date' name='date' placeholder='')
     // Section two
     .form-row
       .form-group.col-md-6

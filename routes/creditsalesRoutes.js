@@ -14,7 +14,8 @@ router.post('/creditsales', async (req,res) =>  {
     console.log(req.body)
     try {
         const newcreditsale = await Creditsales.create(req.body)
-        res.render('success', {message:'Successfully added'})
+            // alert('sale successfully added');
+        res.render('success', {message:'Successfully added'})// if post is successful, show page
     } catch (error) {
         res.send('something is not right!')
     }
