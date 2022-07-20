@@ -18,13 +18,13 @@ nav
     li
       a(href='/dashboard') Dashboard
     li
-      a(href='./procred-form.html') Credit Form
+      a(href='/creditsales') Credit Form
     li
-      a(href='./prosales-form.html') Cash Sales Form
+      a(href='/cashsales') Cash Sales Form
     li
-      a(href='./propro-form.html') Admin
+      a(href='/procurement') Admin
     li
-      a(href='./cashsalesreports') Reports
+      a(href='') Reports
 // Reporting table
 .dash-container
   table.table.table-sm
@@ -49,13 +49,14 @@ nav
                 td #{cashsale.buyername}
                 td #{cashsale.agentname}
                 td 
+                  a(href='/updatecashsale/'+cashsale._id)
+                  button.btn.btn-primary Update
+                td 
                   form(method='get' action='/deletecashsale/'+cashsale._id)
                     console.log(#{cashsale._id})
                     input(type="hidden" name="delete" value=cashsale._id)
                     button.btn.btn-danger(type="submit" ) Delete 
                       //- i.bi.bi-trash(style="color:white;")
-                td 
-                  a(href='/updatecashsale/'+cashsale._id)
-                  button.btn.btn-primary Update
+                  
                   
 script(src='' async='' defer='')

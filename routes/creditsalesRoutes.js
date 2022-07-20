@@ -3,7 +3,7 @@ const router = express.Router();
 const Creditsales = require('../models/CreditSalesModal');
 
 
-//Get request to /creditsales form 
+//Get request to creditsales form 
 router.get('/creditsales', (req,res) => {
     res.render('procred-form')
 })
@@ -24,7 +24,7 @@ router.post('/creditsales', async (req,res) =>  {
 router.get('/creditsalesreports', async(req,res) =>{
     try {
         const data = await Creditsales.find({});
-        res.render('creditsalesreport', {Creditsales:data});
+        res.render('creditsalesreport', {creditsales:data});
     }
     catch (error) {
         return res.status(400).send({
