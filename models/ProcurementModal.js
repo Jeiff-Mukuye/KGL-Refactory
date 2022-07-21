@@ -25,7 +25,7 @@ const procurementSchema = new mongoose.Schema({
     required: true,
   },
 
-  cost: {
+  prodcost: {
     type: Number,
     trim: true,
     required: true,

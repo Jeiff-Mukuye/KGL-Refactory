@@ -9,12 +9,12 @@ const Procurement = require('../models/ProcurementModal');
     res.render('prodprocurement-form')
 })
 
-//Post cashsales to schema 
+//Post procurement to schema 
 router.post('/procurement', async (req,res) =>  {
     console.log(req.body)
     try {
         const newprocurement = await Procurement.create(req.body)
-        res.render('success', {message:'Record Successfully added'})
+        res.render('success', {message:'Successfully added'})// if post is successful, show page
     } catch (error) {
         res.send('something is not right!')
     }
