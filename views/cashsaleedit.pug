@@ -9,7 +9,7 @@ head
   title Cash Sales
   meta(name='description' content='')
   meta(name='viewport' content='width=device-width, initial-scale=1')
-  link(rel='stylesheet' href='css/style.css')
+  link(rel='stylesheet' href='/css/style.css')
   link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
 // Navigation section
 nav
@@ -26,7 +26,7 @@ nav
     //-   a(href='/cashsalesreports') Reports
 // form section
 #demo.container
-  form.structure(action='/cashsales' method='POST')
+  form.structure(action='/updatecashsale' method='post')
     .form-head.col-md-12
       h1
         | KGL
@@ -36,27 +36,27 @@ nav
     if cashsales 
     .form-row
       .form-group.col-md-6
-        //- label(for='inputprodname') Name of Item
-        input#inputprodame.form-control(type='text' name='prodname' value=cashsales.prodname placeholder='Enter Name of Item' onblur='prodNameVal(2, this, errorname)')
+        label(for='inputprodname' ) Name of Item
+        input#inputprodame.form-control(type='text' name='prodname' value=cashsale.prodname disabled  placeholder='Enter Name of Item' onblur='prodNameVal(2, this, errorname)')
         br
         span#errorname 
       .form-group.col-md-6
-        //- label(for='inputamountpaid') Amount Paid
-        input#inputamountpaid.form-control(type='number' name='amountpaid' value=cashsales.amountpaid  placeholder='Enter Amount Paid' onblur='amountPaidVal(2, this, errorname)')
+        label(for='inputamountpaid') Amount Paid
+        input#inputamountpaid.form-control(type='number' name='amountpaid' value=cashsale.amountpaid  placeholder='Enter Amount Paid' onblur='amountPaidVal(2, this, errorname)')
       .form-group.col-md-6
-        //- label(for='inputtonnage') Weight in Kilograms
-        input#inputtonnage.form-control(type='number' name='tonnage' value=cashsales.tonnage placeholder='Enter kgs of produce')
+        label(for='inputtonnage') Weight in Kilograms
+        input#inputtonnage.form-control(type='number' name='tonnage' value=cashsale.tonnage placeholder='Enter kgs of produce')
       .form-group.col-md-6
-        //- label(for='inputdatentime') Date &amp; Time of sale
-        input#inputdatentime.form-control(type='datetime-local' name='date' value=cashsales.date placeholder='')
+        label(for='inputdatentime') Date &amp; Time of sale
+        input#inputdatentime.form-control(type='date' name='date' value=cashsale.date  placeholder='')
     // Section two
     .form-row
       .form-group.col-md-6
-        //- label(for='inputbuyersname') Buyers Name
-        input#inputbuyersname.form-control(type='text' name='buyername' value=cashsales.buyername placeholder='Enter Name of Buyer')
+        label(for='inputbuyersname') Buyers Name
+        input#inputbuyersname.form-control(type='text' name='buyername' value=cashsale.buyername placeholder='Enter Name of Buyer')
       .form-group.col-md-6
-        //- label(for='inputsaleagentname') Sales Agents Name
-        input#inputsaleagentname.form-control(type='text' name='agentname' value=cashsales.agentname placeholder='Enter Name of Sale Agent')
+        label(for='inputsaleagentname') Sales Agents Name
+        input#inputsaleagentname.form-control(type='text' name='agentname' value=cashsale.agentname placeholder='Enter Name of Sale Agent')
     button.btn(type='submit') Add Sale
 // Footer section
 //

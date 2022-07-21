@@ -24,8 +24,16 @@ router.post('/cashsales', async (req,res) =>  {
 // creating route to fetch the cashsales
 router.get('/cashsalesreports', async (req,res) =>{
     try {
-        const data = await Cashsales.find({});
-        res.render('cashsalesreport', {cashsales:data});
+        const data = await Cashsales.find({}).sort({$natural: -1});
+        let totalSales = await Cashsales.aggregate([
+            {'$group': {_id: '$all', 
+            totalIncome: {$sum:'$amountpaid'},
+            totalTonnage: {$sum:'$tonnage'}
+        }}
+        ])
+
+        res.render('cashsalesreport', {cashsales:data,
+        total: totalSales[0]});
     }
     catch (error) {
     return res.status(400).send({
@@ -46,6 +54,15 @@ router.get('/deletecashsale/:id', async (req,res) =>{
     }
 })
 
+//get route for updating
+router.get('/updatecashsale/:id', async(req,res) =>{
+    try{
+        const updateCashSale = await Cashsales.findOne({_id:req.params.id})
+        res.render('cashsaleedit',{cashsale:updateCashSale})
+    } catch(error){
+        res.status(400).send('Unable to find cash sale')
+    }
+})
 // Function for updating
 router.post('/updatecashsale/', async(req,res) =>{
     try{

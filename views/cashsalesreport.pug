@@ -27,6 +27,20 @@ nav
     //-   a(href='') Reports
 // Reporting table
 .dash-container
+  .row 
+    .col-md-6 
+      .card-body 
+        p 
+          h5 Total Revenue
+        p  
+          h5 #{total.totalIncome} Ugx 
+    .col-md-6 
+      .card-body 
+        p 
+          h5 Total Tonnage Sold
+        p  
+          h5 #{total.totalTonnage} Tons 
+    
   table.table.table-sm
     thead
       tr
@@ -49,8 +63,8 @@ nav
                 td #{cashsale.buyername}
                 td #{cashsale.agentname}
                 td 
-                  a(href='/updatecashsale/'+cashsale._id)
-                  button.btn.btn-primary Update
+                  a.btn.btn-primary(href='/updatecashsale/'+cashsale._id) Update
+                  
                 td 
                   form(method='get' action='/deletecashsale/'+cashsale._id)
                     console.log(#{cashsale._id})
