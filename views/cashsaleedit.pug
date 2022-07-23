@@ -20,8 +20,8 @@ nav
       a(href='/creditsales') Credit Form
     li
       a(href='/cashsales') Cash Sales Form
-    //- li
-    //-   a(href='/procurement') Admin
+    li
+      a(href='/director') Admin
     //- li
     //-   a(href='/cashsalesreports') Reports
 // form section
@@ -31,7 +31,7 @@ nav
       h1
         | KGL
         br
-        | CASH SALE edit
+        | CASH SALE EDIT FORM
     // Section one
     if cashsales 
     .form-row
@@ -48,15 +48,15 @@ nav
         input#inputtonnage.form-control(type='number' name='tonnage' value=cashsale.tonnage placeholder='Enter kgs of produce')
       .form-group.col-md-6
         label(for='inputdatentime') Date &amp; Time of sale
-        input#inputdatentime.form-control(type='date' name='date' value=cashsale.date  placeholder='')
+        input#inputdatentime.form-control(type='datetime-local' name='date' value=cashsale.date  placeholder='')
     // Section two
     .form-row
       .form-group.col-md-6
         label(for='inputbuyersname') Buyers Name
-        input#inputbuyersname.form-control(type='text' name='buyername' value=cashsale.buyername placeholder='Enter Name of Buyer')
+        input#inputbuyersname.form-control(type='text' name='buyername' value=cashsale.buyername disabled placeholder='Enter Name of Buyer')
       .form-group.col-md-6
         label(for='inputsaleagentname') Sales Agents Name
-        input#inputsaleagentname.form-control(type='text' name='agentname' value=cashsale.agentname placeholder='Enter Name of Sale Agent')
+        input#inputsaleagentname.form-control(type='text' name='agentname' value=cashsale.agentname disabled placeholder='Enter Name of Sale Agent')
     button.btn(type='submit') Add Sale
 // Footer section
 //

@@ -18,6 +18,7 @@ const resetpasswordRoutes = require('./routes/resetpasswordRoutes')
 const cashsalesRoutes = require('./routes/cashsalesRoutes')
 const creditsalesRoutes = require('./routes/creditsalesRoutes')
 const procurementRoutes = require('./routes/procurementRoutes')
+const directorRoutes = require('./routes/directorRoutes.js')
 
 
 // instantiating an app
@@ -68,6 +69,7 @@ app.use('/', resetpasswordRoutes);
 app.use('/', cashsalesRoutes);
 app.use('/', procurementRoutes);
 app.use('/', creditsalesRoutes);
+app.use('/', directorRoutes);
 
 
 

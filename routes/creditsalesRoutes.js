@@ -24,8 +24,17 @@ router.post('/creditsales', async (req,res) =>  {
 //creating route to fetch the credit sales
 router.get('/creditsalesreports', async(req,res) =>{
     try {
-        const data = await Creditsales.find({});
-        res.render('creditsalesreport', {creditsales:data});
+        const data = await Creditsales.find({}).sort({$natural: -1});
+        let totalCreditSales = await Creditsales.aggregate([
+            {'$group': {_id: '$all', 
+            totalPayables: {$sum:'$amountdue'},
+            totalCreditTonnage: {$sum:'$tonnage'}
+        }}
+        ])
+
+        res.render('creditsalesreport', {creditsales:data, 
+            total: totalCreditSales[0]});
+        
     }
     catch (error) {
         return res.status(400).send({

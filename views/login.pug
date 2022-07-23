@@ -17,16 +17,22 @@ head
     h1 KGL Login
     // Try to use validation in js for role
     // <input type="text" placeholder="name"/>
-    form#loginform(action='/' method='post')
+    form#loginform(action='/' method='post' onsubmit='return loginValidation()')
       .input-control
-        input#empno(name='email' type='email' placeholder='Email Address')
-        .error
+        label(for='email') 
+        input#email(type='email' name='email' placeholder='Username')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
       .input-control
-        input#pwd(name='password' type='password' placeholder='Password')
-        .error
-      button login
+        label(for='password') 
+        input#password(type='password' name='password' placeholder='Employee password')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
+      button.btn(type='submit') login
   // footer section
   .footer-section
     p Copyright &copy; Karibu Groceries | Developed by Jeiff
-script(src='./script.js' async='' defer='')
+script(src='js/login.js' async='' defer='')
 script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
