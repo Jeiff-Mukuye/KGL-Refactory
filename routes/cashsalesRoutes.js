@@ -1,6 +1,6 @@
-const { query } = require('express');
+// const { query } = require('express');
 const express = require('express');
-const { findOneAndUpdate } = require('../models/CashSalesModal');
+// const { findOneAndUpdate } = require('../models/CashSalesModal');
 const router = express.Router();
 const Cashsales = require('../models/CashSalesModal');
 

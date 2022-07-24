@@ -2,61 +2,67 @@ const mongoose = require("mongoose");
 // const passportLocalMongoose = require("passport-local-mongoose");
 
 const procurementSchema = new mongoose.Schema({
-  prodname: {
+  inputprodname: {
     type: String,
     trim: true,
     required: true,
   },
 
-  prodtype: {
+  inputprodtype: {
     type: String,
     trim: true,
     required: true,
   },
 
-  date: {
+  inputprocdate: {
     type: Date,
     required: true,
   },
 
-  time: {
+  inputproctime: {
     type: String,
     trim: true,
     required: true,
   },
 
-  prodcost: {
+  inputprodcost: {
     type: Number,
     trim: true,
     required: true,
   },
 
-  tonnage: {
+  inputtonnage: {
     type: Number,
     trim: true,
     required: true,
   },
 
-  dealername: {
+  inputdealername: {
     type: String,
     trim: true,
     required: true,
   },
 
-  dealercontact: {
+  inputdealercontact: {
     type: Number,
     trim: true,
     required: true,
   },
 
-  itemprice: {
-    type: Number,
-    trim: true,
-    required: true,
-  },
-
-  branchname: {
+  inputbranchname: {
     type: String,
+    trim: true,
+    required: true,
+  },
+
+  inputbranchcontact: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+
+  inputsaleprice: {
+    type: Number,
     trim: true,
     required: true,
   },

@@ -1,6 +1,6 @@
 const form = document.querySelector('#loginform');
-const usernameInput = document.querySelector('#username');
-const emailInput = document.querySelector('#email');
+// const usernameInput = document.querySelector('#username');
+const usernameInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const confirmPasswordInput = document.querySelector('#confirm-password');
 
@@ -35,20 +35,20 @@ function isFormValid(){
 //validation function
 function validateForm() {
     //username validation
-    if(usernameInput.value.trim() =='') { //if username is empty
-        setError(usernameInput, 'This field cannot be empty');//seterro function, parse the field, then the message
-    }else if(usernameInput.value.trim().length < 5 || usernameInput.value.trim.length > 15){
-        setError(usernameInput, 'Name must be min 5 and max 15 characters');
-    }else {
-        setSuccess(usernameInput, '');
-    }
+    // if(usernameInput.value.trim() =='') { //if username is empty
+    //     setError(usernameInput, 'This field cannot be empty');//seterro function, parse the field, then the message
+    // }else if(usernameInput.value.trim().length < 5 || usernameInput.value.trim.length > 15){
+    //     setError(usernameInput, 'Name must be min 5 and max 15 characters');
+    // }else {
+    //     setSuccess(usernameInput, '');
+    // }
     //email validation
-    if(emailInput.value.trim() == ''){
-        setError(emailInput, 'Provide an email address');
-    }else if(isEmailValid(emailInput.value)){
-        setSuccess(emailInput);
+    if(usernameInput.value.trim() == ''){
+        setError(usernameInput, 'Provide an email address');
+    }else if(isEmailValid(usernameInput.value)){
+        setSuccess(usernameInput);
     }else{
-        setError(emailInput, 'Provide a valid email address')
+        setError(usernameInput, 'Provide a valid email address')
     }
     //password validation
     if(passwordInput.value.trim() == '') {

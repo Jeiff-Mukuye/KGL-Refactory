@@ -27,6 +27,19 @@ nav
     //-   a(href='/cashsalesreports') Reports
 // Reporting table
 .dash-container
+  .row 
+    .col-md-6 
+      .card-body 
+        p 
+          h5 Total Revenue
+        p  
+          h5 #{total.totalIncome} Ugx 
+    .col-md-6 
+      .card-body 
+        p 
+          h5 Total Tonnage Sold
+        p  
+          h5 #{total.totalTonnage} Tons 
   table.table.table-sm
     thead
       tr
@@ -47,17 +60,17 @@ nav
         if creditsales.length 
         each creditsale in creditsales 
             tr 
-                td #{creditsale.buyername}
-                td #{creditsale.nin}
-                td #{creditsale.location}
-                td #{creditsale.buyercontact}
-                td #{creditsale.amountdue}
-                td #{creditsale.duedate}
-                td #{creditsale.prodname}
-                td #{creditsale.prodtype}
-                td #{creditsale.tonnage}
-                td #{creditsale.dispatchdate}
-                td #{creditsale.agentname}
+                td #{creditsale.inputbuyername}
+                td #{creditsale.inputnin}
+                td #{creditsale.inputlocation}
+                td #{creditsale.inputbuyercontact}
+                td #{creditsale.inputamountdue}
+                td #{creditsale.inputduedate}
+                td #{creditsale.inputprodname}
+                td #{creditsale.inputprodtype}
+                td #{creditsale.inputtonnage}
+                td #{creditsale.inputdispatchdate}
+                td #{creditsale.inputsalsagentname}
                 
                 
                 td 

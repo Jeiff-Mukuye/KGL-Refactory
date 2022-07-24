@@ -2,35 +2,35 @@ const mongoose = require("mongoose");
 // const passportLocalMongoose = require("passport-local-mongoose");
 
 const cashsalesSchema = new mongoose.Schema({
-  prodname: {
+  inputprodname: {
     type: String,
     trim: true,
     required: true,
   },
 
-  amountpaid: {
+  inputamountpaid: {
     type: Number,
     required: true,
   },
 
-  tonnage: {
+  inputtonnage: {
     type: Number,
     required: true,
   },
 
-  date: {
+  inputdatentime: {
     type: Date,
     trim: true,
     required: true,
   },
   
-  buyername: {
+  inputbuyersname: {
     type: String,
     trim: true,
     required: true,
   },
 
-  agentname: {
+  inputsaleagentname: {
     type: String,
     trim: true,
     required: true,
