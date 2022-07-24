@@ -10,6 +10,7 @@ head
   meta(name='description' content='')
   meta(name='viewport' content='width=device-width, initial-scale=1')
   link(rel='stylesheet' href='css/style.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==' crossorigin='anonymous' referrerpolicy='no-referrer')
   link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
 // Navigation section
 nav
@@ -26,7 +27,7 @@ nav
     //-   a(href='/cashsalesreports') Reports
 // form section
 .container
-  form.structure(action='/procurement' method='POST')
+  form#proform.structure(action='/procurement' method='POST')
     .form-head.col-md-12
       h1
         | KGL
@@ -35,42 +36,78 @@ nav
     // Section one
     .form-row
       .form-group.col-md-3
-        //- label(for='inputprodname') Name of Item
-        input#inputprodname.form-control(type='text' name='prodname' placeholder='Enter name of Item')
+        label(for='inputprodname') Name of Item
+        input#inputprodname.form-control(type='text' name='inputprodname' placeholder='Enter name of Item')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
       .form-group.col-md-3
-        //- label(for='inputprodtype') Type of Item
-        input#inputprodtype.form-control(type='text' name='prodtype' placeholder='Enter Type of Item')
+        label(for='inputprodtype') Type of Item
+        input#inputprodtype.form-control(type='text' name='inputprodtype' placeholder='Enter Type of Item')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
       .form-group.col-md-3
-        //- label(for='inputprocdate') Date of Procurement
-        input#inputprocdate.form-control(type='date' name='date' placeholder='')
+        label(for='inputprocdate') Date of Procurement
+        input#inputprocdate.form-control(type='date' name='inputprocdate' placeholder='')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
       .form-group.col-md-3
-        //- label(for='inputproctime') Time of Procurement
-        input#inputproctime.form-control(type='time' name='time' placeholder='')
+        label(for='inputproctime') Time of Procurement
+        input#inputproctime.form-control(type='time' name='inputproctime' placeholder='')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
     // Section two
     .form-row
       .form-group.col-md-3
-        //- label(for='inputprodcost') Cost
-        input#inputprodcost.form-control(type='number' name='prodcost' placeholder='Enter Cost of Item')
+        label(for='inputprodcost') Cost of Item
+        input#inputprodcost.form-control(type='number' name='inputprodcost' placeholder='Enter Cost of Item')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
       .form-group.col-md-3
-        //- label(for='inputtonnage') Weight in Kilograms
-        input#inputtonnage.form-control(type='number' name='tonnage' placeholder='Enter kgs of produce')
+        label(for='inputtonnage') Weight in Kilograms
+        input#inputtonnage.form-control(type='number' name='inputtonnage' placeholder='Enter kgs of produce')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
       .form-group.col-md-3
-        //- label(for='inputitemprice') Dealers&apos; Name
-        input#inputdealername.form-control(type='text' name='dealername' placeholder='Enter name of Dealer')
+        label(for='inputdealername') Dealers&apos; Name
+        input#inputdealername.form-control(type='text' name='inputdealername' placeholder='Enter name of Dealer')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
       .form-group.col-md-3
-        //- label(for='inputdealercontact') Buyer Contact
-        input#inputdealercontact.form-control(type='number' name='dealercontact' placeholder='Enter Contact of Dealer')
+        label(for='inputdealercontact') Buyer Contact
+        input#inputdealercontact.form-control(type='number' name='inputdealercontact' placeholder='Enter Contact of Dealer')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
       // Section three
-      .form-group.col-md-6
-        //- label(for='inputitemprice') Price of Item
-        input#inputitemprice.form-control(type='number' name='itemprice' placeholder='Enter Item Price')
-      .form-group.col-md-6
-        //- label(for='inputbranchname') Name of Branch
-        input#inputbranchname.form-control(type='text' name='branchname' placeholder='Enter Name of Branch')
+      .form-group.col-md-4
+        label(for='inputbranchname') Name of Branch
+        input#inputbranchname.form-control(type='text' name='inputbranchname' placeholder='Enter Name of Branch')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
+      .form-group.col-md-4
+        label(for='inputbranchcontact') Branch contact
+        input#inputbranchcontact.form-control(type='text' name='inputbranchcontact' placeholder='Enter Item Price')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
+      .form-group.col-md-4
+        label(for='inputsaleprice') Price of sale
+        input#inputsaleprice.form-control(type='number' name='inputsaleprice' placeholder='Enter Price to be sold at')
+        i.fa-solid.fa-circle-check
+        i.fa-solid.fa-circle-exclamation
+        p
     button.btn(type='submit') Add Produce
 // Footer section
 //
   <div class="main-footer">
   <p>Developed by Jeiff</p>
   </div>
-script(src='' async='' defer='')
+script(src='js/propro.js' async='' defer='')

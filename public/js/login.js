@@ -7,7 +7,7 @@ passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()])[A-Za-z\d@#$!%*?&
 function loginValidation(){
     if (emailInput.value == "" || !emailRegex.test(emailInput.value)) {
         emailInput.style.border = "1px solid red";
-        // alert("Please enter a valid e-mail address.");
+        alert("Please enter a valid e-mail address.");
         emailInput.focus();
         return false;
       }
@@ -16,8 +16,9 @@ function loginValidation(){
       }
       //password validation
       if (passInput.value == "" || passInput.value.length <= 6) {
-        // alert("Please enter your password");
+        alert("Please enter your password");
         passInput.style.border = "1px solid red";
+        alert("Please enter your password");
         passInput.focus();
         return false;
       }

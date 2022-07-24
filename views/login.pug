@@ -10,29 +10,50 @@ head
   meta(name='description' content='')
   meta(name='viewport' content='width=device-width, initial-scale=1')
   link(rel='stylesheet' href='css/page-style.css')
-  link(rel='stylesheet' href='')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==' crossorigin='anonymous' referrerpolicy='no-referrer')
   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous')
 .landing-page
   .form
-    h1 KGL Login
+    h1
+      |KGL Login
     // Try to use validation in js for role
     // <input type="text" placeholder="name"/>
-    form#loginform(action='/' method='post' onsubmit='return loginValidation()')
+    form#loginform(action='/' method='post')
+      //- .input-control
+      //-   label(for='username') Username
+      //-   input#username(type='text' name='username' placeholder='Employee Name')
+      //-   i.fa-solid.fa-circle-check
+      //-   i.fa-solid.fa-circle-exclamation
+      //-   p
       .input-control
-        label(for='email') 
-        input#email(type='email' name='email' placeholder='Username')
+        label(for='email') Username
+        input#email(type='email' name='email' placeholder='Enter Username')
         i.fa-solid.fa-circle-check
         i.fa-solid.fa-circle-exclamation
         p
       .input-control
-        label(for='password') 
+        label(for='password') Password
         input#password(type='password' name='password' placeholder='Employee password')
         i.fa-solid.fa-circle-check
         i.fa-solid.fa-circle-exclamation
         p
+      //- .input-control
+      //-   label(for='confirm-password') Confirm
+      //-   input#confirm-password(type='password' name='confirm-password' placeholder='Confirm Password')
+      //-   i.fa-solid.fa-circle-check
+      //-   i.fa-solid.fa-circle-exclamation
+      //-   p Error Message
       button.btn(type='submit') login
   // footer section
   .footer-section
     p Copyright &copy; Karibu Groceries | Developed by Jeiff
-script(src='js/login.js' async='' defer='')
-script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
+script(src='js/form.js' async='' defer='')
+//
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+// <i class="fa-solid fa-circle-check"></i>
+// <i class="fa-solid fa-circle-exclamation"></i>
+
+
+//onsubmit='return loginValidation()')

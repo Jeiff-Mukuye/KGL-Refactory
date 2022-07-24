@@ -3,149 +3,201 @@ Global Css
 ----------------------------------- */
 *{
     
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: medium;
-    
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  
 }
 /* -----------------------------------
 Navbar Css
 ----------------------------------- */
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #56C6A9;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2bb18d;
 }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #2bb18d;
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    background-color: #56C6A9;
-    
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #006B54;
-    text-decoration: none;
-    color: #fff;
-  }
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #006B54;
+  text-decoration: none;
+  color: #fff;
+}
 
 /* -----------------------------------
 Form Css
 ----------------------------------- */
+
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    background-color: #EAE6DA;
-    border-radius: 5px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background-color: #EAE6DA;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
 
-  .structure{
-    padding: 10px;
-  }
+.structure{
+  padding: 10px;
+}
+
+.form-head{
+  color: #BCBCBE;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+/*============================
+Input fields style
+==============================*/
+.col-md-6{
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.form-group input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  /* margin: 0px; */
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+.form-group i{
+  visibility: hidden;
+  position: absolute;
+}
+
+
+/*===================
+Validation colors
+=======================*/
+.form.form-group.success input{
+/* border-color: #2bb18d; */
+border: solid 2px #2bb18d;
+}
+.success i.fa-circle-check{
+visibility: visible;
+color: #2bb18d;
+}
+.form.form-group.error input{
+/* border-color: #BC243C; */
+border: solid 2px #BC243C;
+}
+.error i.fa-circle-exclamation{
+visibility: visible;
+color: #BC243C;
+}
+
+/*================================
+paragraph css
+================================*/
+.form-group p{
+font-size: 13px;
+font-style:italic;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+text-align: left;
+visibility: hidden;
+padding: 0;
+margin-top: 0;
+margin-left: 19px;
+margin-bottom: 0;
+
+}
+
+.form-group.error p{
+font-size: 13px;
+font-style:italic;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+text-align: left;
+visibility: visible;
+color:#BC243C;
+}
+
+.form-group.success p{
+font-size: 13px;
+font-style:italic;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+text-align: left;
+visibility: visible;
+color: #2bb18d;
+}
+
+/* input[type=text] {
+  padding: 8px 30px;
+ 
+} */
+ 
+
+button{
+  background-color: #56C6A9;
+  color: rgb(85, 83, 83);
   
-  .form-head{
-    color: #BCBCBE;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-  }
+}
 
-  /* input[type=text] {
-    padding: 8px 30px;
-   
-  } */
+button:hover{
+  background-color: #006B54;
+  color: #ecf39e;
+}
 
-  /* #erroname{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 100;
-  } */
-   
-
-  button{
-    background-color: #56C6A9;
-    color: rgb(85, 83, 83);
-    
-  }
-
-  button:hover{
-    background-color: #23723d;
-    color: #ecf39e;
-  }
-
-
-
-    /* -----------------------------------
+/* -----------------------------------
 Dashboard Css
 ----------------------------------- */
 .dash-container{
-  margin-top: 10px;
-  margin-bottom: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
-  border-radius: 10px; 
-  font-size: small;
-  
-  
+margin-top: 10px;
+margin-bottom: 30px;
+margin-left: 30px;
+margin-right: 30px;
+border-radius: 10px;
+
 }
 
 .card {
-  float: left;
-  margin-right: 0px;
-  margin-left: 30px;
-  margin-top: 10px;
-  
-  
-}
-/* Report buttons */
-button.btn.btn-danger{
-  font-size: small;
-}
-button.btn.btn-primary{
-  font-size: small;
+float: left;
+margin-right: 0px;
+margin-left: 30px;
+margin-top: 10px;
+background-color: #EAE6DA;
+
 }
 
-/* Success message button */
-.btn-success{
-  margin-left: 45%;
-  
-}
-.btn:hover{
-  color: #ecf39e;
-  
-}
 
-a.btn.btn-primary{
-  background-color: #56C6A9;
-  border: 0;
-}
-a.btn.btn-primary:hover{
-  background-color: #23723d;
-  color: #ecf39e;
-}
+
 /* -----------------------------------
 Footer Css
 ----------------------------------- */
 /* .main-footer {
-    background-color: #EAE6DA;
-    position: fixed;
-    margin-bottom: 0;
-    
-}
+  /* background-color: #EAE6DA; */
+/*  
+  margin-bottom: 0;
+  margin-top: 100px;
+  
+}*/
 
-.main-footer p{
-    text-align: center;
-    border-top: solid 2px #006B54 ;
+/*.main-footer p{
+  text-align: center;
+  border-top: solid 2px #006B54 ;
 } */
-
