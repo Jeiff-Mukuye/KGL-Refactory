@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Procurement = require('../models/ProcurementModal');
+const Cashsales = require('../models/CashSalesModal');
 
 
 
@@ -30,9 +31,26 @@ router.get('/procurementsreports', async (req,res) =>{
             totalProcuredTonnage: {$sum:'$inputtonnage'}
         }}
         ])
+        let totalcashsales = await Cashsales.aggregate([
+            {'$group': {_id: '$all', 
+            totalCashSaleTonnage: {$sum:'$inputtonnage'}
+        }}
+        ])
+        // console.log(totalProcurements)
+        let [a] = totalProcurements
+        console.log(a)
+        let b = a.totalProcuredTonnage
+        console.log(b)
+        // distrcturing cashsale array
+        let [c] = totalcashsales
+        console.log(c)
+        let d = c.totalCashSaleTonnage
+        console.log(d)
+
+        let currentstock = b-d;
 
         res.render('procuremntsreport', {procurements:data,
-        total: totalProcurements[0]});
+        total: totalProcurements[0], currentStock: currentstock});
     }
     catch (error) {
     return res.status(400).send({

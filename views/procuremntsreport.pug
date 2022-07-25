@@ -28,18 +28,25 @@ nav
 // Reporting table
 .dash-container
   .row 
-    .col-md-6 
+    .col-md-4 
       .card-body 
         p 
           h5 Total Expenditures
         p  
           h5 #{total.totalCost} Ugx 
-    .col-md-6 
+    .col-md-4 
       .card-body 
         p 
-          h5 Total Tonnage Sold
+          h5 Total Tonnage Procured
         p  
-          h5 #{total.totalProcuredTonnage} Tons 
+          h5 #{total.totalProcuredTonnage} Kgs 
+    .col-md-4 
+      .card-body 
+        p 
+          h5 Current Stock
+        p  
+          h5 #{currentStock} Kgs
+
   table.table.table-sm
     thead
       tr
@@ -78,7 +85,7 @@ nav
                   form(method='get' action='/deleteprocurement/'+procurement._id)
                     console.log(#{procurement._id})
                     input(type="hidden" name="delete" value=procurement._id)
-                    button.btn.btn-danger(type="submit" ) Delete 
+                    button.btn.btn-danger(type="submit") Delete 
                       //- i.bi.bi-trash(style="color:white;")
                   
                   
