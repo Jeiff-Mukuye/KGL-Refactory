@@ -57,17 +57,32 @@ function validateForm(){
     //Buyer name Validation
     if(buyersnameInput.value.trim().length < 2){
         setError(buyersnameInput, 'Name should be atleast 2 characters');
+    }else if(!alphanumericstwo(buyersnameInput.value)){
+        setError(buyersnameInput, 'No special characters allowed');
     }else{
         setSuccess(buyersnameInput);
     }
     //Sales agent name Validation
     if(salesagentnameInput.value.trim().length < 2){
         setError(salesagentnameInput, 'Name should be atleast 2 characters');
+    }else if(!alphanumerics(salesagentnameInput.value)){
+        setError(salesagentnameInput, 'No special characters allowed');
     }else{
         setSuccess(salesagentnameInput);
     }
 };
 
+//function for Alphanumeric
+function alphanumerics(salesagentnameInput){
+    const reg =/^[a-z0-9]*$/i;
+    return reg.test(salesagentnameInput);
+}
+
+//function for Alphanumerictwo
+function alphanumericstwo(buyersnameInput){
+    const reg =/^[a-z0-9]*$/i;
+    return reg.test(buyersnameInput);
+}
 
 // Set Error Function
 function setError(element,errorMessage){

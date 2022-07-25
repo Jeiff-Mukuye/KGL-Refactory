@@ -39,7 +39,7 @@ function validateForm(){
     if(prodnameInput.value.trim()==''){
         setError(prodnameInput, 'Name cannot be empty'); 
     }else if(!alphanumerics(prodnameInput.value)){
-        setError(prodnameInput, 'Use only alphanumeric');
+        setError(prodnameInput, 'No special characters allowed');
     }else{
         setSuccess(prodnameInput);
     }
@@ -72,6 +72,8 @@ function validateForm(){
     //Dealer name validation
     if(dealernameInput.value.trim().length < 2){
         setError(dealernameInput, 'Name shoud be atleast 2 charachers');
+    }else if(!alphanumericstwo(dealernameInput.value)){
+        setError(dealernameInput, 'No special characters allowed');
     }else{
         setSuccess(dealernameInput);
     }
@@ -117,6 +119,13 @@ function alphanumerics(prodtypeInput){
     const reg =/^[A-Za-z0-9]+$/;
     return reg.test(prodtypeInput);
 }
+
+//function for Only Alphabets
+function alphanumericstwo(dealernameInput){
+    const reg =/^[A-Za-z0-9]+$/;
+    return reg.test(dealernameInput);
+}
+
 
 // //function for Alphanumeric
 // function alphanumerics(dealernameInput){

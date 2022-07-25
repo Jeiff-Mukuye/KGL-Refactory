@@ -41,13 +41,15 @@ function validateForm(){
     if(ninInput.value.trim().length < 2){
         setError(ninInput, 'Type should be atleast 2 characters');
     }else if(!alphanumerics(ninInput.value)){
-        setError(ninInput, 'Use only alphabets');
+        setError(ninInput, 'No special characters allowed');
     }else{
         setSuccess(ninInput);
     }
     //Buyer name Validation
     if(buyernameInput.value.trim().length < 2){
         setError(buyernameInput, 'Field should contain atleast 2 characters');
+    }else if(!alphanumericsone(buyernameInput.value)){
+        setError(buyernameInput, 'No special characters allowed');
     }else{
         setSuccess(buyernameInput);
     }
@@ -72,12 +74,16 @@ function validateForm(){
     // Sales agent name vValidation
     if(agentnameInput.value.trim().length < 2){
         setError(agentnameInput, 'Name shoud be atleast 2 charachers');
+    }else if(!alphanumericstwo(agentnameInput.value)){
+        setError(agentnameInput, 'No special characters allowed');
     }else{
         setSuccess(agentnameInput);
     }
     //Produce name Validation
     if(prodnameInput.value.trim().length < 2){
         setError(prodnameInput, 'Name shoud be atleast 2 charachers');
+    }else if(!alphanumericsthree(prodnameInput.value)){
+        setError(prodnameInput, 'No special characters allowed');
     }else{
         setSuccess(prodnameInput);
     }
@@ -87,7 +93,23 @@ function alphanumerics(ninInput){
     const reg =/^[a-z0-9]*$/i;
     return reg.test(ninInput);
 }
+//function for Alphanumericone
+function alphanumericsone(buyernameInput){
+    const reg =/^[a-z0-9]*$/i;
+    return reg.test(buyernameInput);
+}
 
+//function for Alphanumerictwo
+function alphanumericstwo(agentnameInput){
+    const reg =/^[a-z0-9]*$/i;
+    return reg.test(agentnameInput);
+}
+
+//function for Alphanumericthree
+function alphanumericsthree(prodnameInput){
+    const reg =/^[a-z0-9]*$/i;
+    return reg.test(prodnameInput);
+}
 
 // Set Error Function
 function setError(element,errorMessage){
