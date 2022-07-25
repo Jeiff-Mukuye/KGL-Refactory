@@ -58,7 +58,7 @@ nav
         th(scope='col') Action
     tbody 
         if procurements.length 
-        each procurement in Procurement 
+        each procurement in procurements 
             tr 
                 td #{procurement.inputprodname}
                 td #{procurement.inputprodtype}
@@ -71,15 +71,15 @@ nav
                 td #{procurement.inputbranchname}
                 td #{procurement.inputbranchcontact}
                 td #{procurement.inputsaleprice}
-                td 
-                  a.btn.btn-primary(href='/updatecashsale/'+cashsale._id) Update
+                //- td 
+                //-   a.btn.btn-primary(href='/updatecashsale/'+cashsale._id) Update
                   
-                td 
-                  form(method='get' action='/deletecashsale/'+cashsale._id)
-                    console.log(#{cashsale._id})
-                    input(type="hidden" name="delete" value=cashsale._id)
-                    button.btn.btn-danger(type="submit" ) Delete 
-                      //- i.bi.bi-trash(style="color:white;")
+                //- td 
+                //-   form(method='get' action='/deletecashsale/'+cashsale._id)
+                //-     console.log(#{cashsale._id})
+                //-     input(type="hidden" name="delete" value=cashsale._id)
+                //-     button.btn.btn-danger(type="submit" ) Delete 
+                //-       //- i.bi.bi-trash(style="color:white;")
                   
                   
 script(src='' async='' defer='')

@@ -4,11 +4,11 @@ const Procurement = require('../models/ProcurementModal');
 
 
 
-//Get request to /cashsales form  
+//Get request to /procurement form  
   router.get('/procurement', (req,res) => {
-    res.render('prodprocurement-form')
+    res.render('prodprocurement-form') 
+ 
 })
-
 //Post procurement to schema 
 router.post('/procurement', async (req,res) =>  {
     console.log(req.body)
@@ -31,7 +31,7 @@ router.get('/procurementsreports', async (req,res) =>{
         }}
         ])
 
-        res.render('procuremntsreport', {procurement:data,
+        res.render('procuremntsreport', {procurements:data,
         total: totalProcurements[0]});
     }
     catch (error) {
