@@ -38,11 +38,9 @@ function validateForm(){
     //product name field
     if(prodnameInput.value.trim()==''){
         setError(prodnameInput, 'Name cannot be empty'); 
-    }
-    // if(onAlphabets(prodnameInput.value)){
-    //     setError('Use an alphanumeric name');
-    // }
-    else{
+    }else if(!alphanumerics(prodnameInput.value)){
+        setError(prodnameInput, 'Use only alphanumeric');
+    }else{
         setSuccess(prodnameInput);
     }
     //Type of Item Validation
@@ -113,16 +111,23 @@ function onlyAlpabets(prodtypeInput){
     const reg =/^[A-Za-z]+$/;
     return reg.test(prodtypeInput);
 }
-//function for Alphanumeric
-function alphanumerics(dealernameInput){
-    const reg =/^[a-z0-9]*$/i;
-    return reg.test(dealernameInput);
+
+//function for Only Alphabets
+function alphanumerics(prodtypeInput){
+    const reg =/^[A-Za-z0-9]+$/;
+    return reg.test(prodtypeInput);
 }
 
+// //function for Alphanumeric
+// function alphanumerics(dealernameInput){
+//     const reg =/^[a-z0-9]*$/i;
+//     return reg.test(dealernameInput);
+// }
 
-// Function to check letters and numbers
-function alphanumeric(dealernameInput)
-{
- const letterNumber = /^[0-9a-zA-Z]+$/;
- return reg.test(dealernameInput);
-}
+
+// // Function to check letters and numbers
+// function alphanumeric(dealernameInput)
+// {
+//  const letterNumber = /^[0-9a-zA-Z]+$/;
+//  return reg.test(dealernameInput);
+// }

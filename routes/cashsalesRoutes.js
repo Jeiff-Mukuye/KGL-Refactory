@@ -16,7 +16,7 @@ router.post('/cashsales', async (req,res) =>  {
     console.log(req.body)
     try {
         const newcashsale = await Cashsales.create(req.body)
-        res.render('success', {message:'Successfully added'})
+        res.render('prosales-form')
     } catch (error) {
         res.send('something is not right!')
     }
@@ -27,8 +27,8 @@ router.get('/cashsalesreports', async (req,res) =>{
         const data = await Cashsales.find({}).sort({$natural: -1});
         let totalSales = await Cashsales.aggregate([
             {'$group': {_id: '$all', 
-            totalIncome: {$sum:'$amountpaid'},
-            totalTonnage: {$sum:'$tonnage'}
+            totalIncome: {$sum:'$inputamountpaid'},
+            totalTonnage: {$sum:'$inputtonnage'}
         }}
         ])
 
@@ -66,14 +66,25 @@ router.get('/updatecashsale/:id', async(req,res) =>{
 // Function for updating
 router.post('/updatecashsale/', async(req,res) =>{
     try{
-        const updated = await cashsales.findOneAndUpdate({_id: req.query.id}, req.body)
-        res.redirect('/cashsalesreport');
+        await Cashsales.findOneAndUpdate({_id: req.query.id}, req.body)
+        res.redirect('/cashsalesreports');
     }catch(error){
         res.status(400).send('unable to update cashsale')
     }
 } )
 
-});
+//popup function
+// let popup = document.getElementById("popup") 
+
+// function openPopup(){
+//   popup.classList.add('open-Popup')
+// }
+
+// function closePopup(){
+//   popup.classList.remove('open-Popup')
+// }  
+
+ });
 
 
 // always keep at the bottom of this file

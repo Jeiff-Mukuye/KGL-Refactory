@@ -62,7 +62,7 @@ const creditsalesSchema = new mongoose.Schema({
     required: true,
   },
 
-  inputsalsagentname: {
+  inputsaleagentname: {
     type: String,
     trim: true,
     required: true,

@@ -26,7 +26,7 @@ nav
     //-   a(href='/cashsalesreports') Reports
 // form section
 #demo.container
-  form.structure(action='/updatecashsale' method='post')
+  form.structure(action='/updatecashsale/?id='+cashsale._id method='post')
     .form-head.col-md-12
       h1
         | KGL
@@ -37,26 +37,26 @@ nav
     .form-row
       .form-group.col-md-6
         label(for='inputprodname' ) Name of Item
-        input#inputprodame.form-control(type='text' name='prodname' value=cashsale.prodname disabled  placeholder='Enter Name of Item' onblur='prodNameVal(2, this, errorname)')
+        input#inputprodame.form-control(type='text' name='inputprodname' value=cashsale.inputprodname placeholder='Enter Name of Item' onblur='prodNameVal(2, this, errorname)')
         br
         span#errorname 
       .form-group.col-md-6
         label(for='inputamountpaid') Amount Paid
-        input#inputamountpaid.form-control(type='number' name='amountpaid' value=cashsale.amountpaid  placeholder='Enter Amount Paid' onblur='amountPaidVal(2, this, errorname)')
+        input#inputamountpaid.form-control(type='number' name='inputamountpaid' value=cashsale.inputamountpaid  placeholder='Enter Amount Paid' onblur='amountPaidVal(2, this, errorname)')
       .form-group.col-md-6
         label(for='inputtonnage') Weight in Kilograms
-        input#inputtonnage.form-control(type='number' name='tonnage' value=cashsale.tonnage placeholder='Enter kgs of produce')
+        input#inputtonnage.form-control(type='number' name='inputtonnage' value=cashsale.inputtonnage placeholder='Enter kgs of produce')
       .form-group.col-md-6
         label(for='inputdatentime') Date &amp; Time of sale
-        input#inputdatentime.form-control(type='datetime-local' name='date' value=cashsale.date  placeholder='')
+        input#inputdatentime.form-control(type='datetime-local' name='inputdatentime' value=cashsale.inputdatentime  placeholder='')
     // Section two
     .form-row
       .form-group.col-md-6
         label(for='inputbuyersname') Buyers Name
-        input#inputbuyersname.form-control(type='text' name='buyername' value=cashsale.buyername disabled placeholder='Enter Name of Buyer')
+        input#inputbuyersname.form-control(type='text' name='inputbuyersname' value=cashsale.inputbuyersname placeholder='Enter Name of Buyer')
       .form-group.col-md-6
         label(for='inputsaleagentname') Sales Agents Name
-        input#inputsaleagentname.form-control(type='text' name='agentname' value=cashsale.agentname disabled placeholder='Enter Name of Sale Agent')
+        input#inputsaleagentname.form-control(type='text' name='inputsaleagentname' value=cashsale.inputsaleagentname  placeholder='Enter Name of Sale Agent')
     button.btn(type='submit') Add Sale
 // Footer section
 //

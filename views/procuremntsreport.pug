@@ -7,7 +7,7 @@ doctype html
 head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  title KGL Cash Sales Report
+  title KGL Procurement Report
   meta(name='description' content='')
   meta(name='viewport' content='width=device-width, initial-scale=1')
   link(rel='stylesheet' href='/css/style.css')
@@ -31,36 +31,46 @@ nav
     .col-md-6 
       .card-body 
         p 
-          h5 Total Revenue
+          h5 Total Expenditures
         p  
-          h5 #{total.totalIncome} Ugx 
+          h5 #{total.totalCost} Ugx 
     .col-md-6 
       .card-body 
         p 
           h5 Total Tonnage Sold
         p  
-          h5 #{total.totalTonnage} Kgs 
+          h5 #{total.totalProcuredTonnage} Tons 
   table.table.table-sm
     thead
       tr
-        th(scope='col') Item
-        th(scope='col') Amount
-        th(scope='col') Tonnage
-        th(scope='col') Date
-        th(scope='col') Buyer
-        th(scope='col') Agent
+        th(scope='col') Product Name
+        th(scope='col') Product Type
+        th(scope='col') Procurement Date
+        th(scope='col') Procurement Time
+        th(scope='col') Product Cost
+        th(scope='col') Tonnage Procured
+        th(scope='col') Dealers Name
+        th(scope='col') Dealers Contact
+        th(scope='col') Branch Name
+        th(scope='col') Branch Contact
+        th(scope='col') Item Sale
         th(scope='col') Action
         th(scope='col') Action
     tbody 
-        if cashsales.length 
-        each cashsale in cashsales 
+        if procurements.length 
+        each procurement in Procurement 
             tr 
-                td #{cashsale.inputprodname}
-                td #{cashsale.inputamountpaid}
-                td #{cashsale.inputtonnage}
-                td #{cashsale.inputdatentime}
-                td #{cashsale.inputbuyersname}
-                td #{cashsale.inputsaleagentname}
+                td #{procurement.inputprodname}
+                td #{procurement.inputprodtype}
+                td #{procurement.inputprocdate}
+                td #{procurement.inputproctime}
+                td #{procurement.inputprodcost}
+                td #{procurement.inputtonnage}
+                td #{procurement.inputdealername}
+                td #{procurement.inputdealercontact}
+                td #{procurement.inputbranchname}
+                td #{procurement.inputbranchcontact}
+                td #{procurement.inputsaleprice}
                 td 
                   a.btn.btn-primary(href='/updatecashsale/'+cashsale._id) Update
                   

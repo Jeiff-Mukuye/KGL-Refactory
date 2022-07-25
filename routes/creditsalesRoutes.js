@@ -14,8 +14,9 @@ router.post('/creditsales', async (req,res) =>  {
     console.log(req.body)
     try {
         const newcreditsale = await Creditsales.create(req.body)
-            // alert('sale successfully added');
-        res.render('success', {message:'Successfully added'})// if post is successful, show page
+        //alert('sale successfully added');
+        res.render('procred-form')
+        //res.render('success', {message:'Successfully added'})// if post is successful, show page
     } catch (error) {
         res.send('something is not right!')
     }
@@ -27,8 +28,8 @@ router.get('/creditsalesreports', async(req,res) =>{
         const data = await Creditsales.find({}).sort({$natural: -1});
         let totalCreditSales = await Creditsales.aggregate([
             {'$group': {_id: '$all', 
-            totalPayables: {$sum:'$amountdue'},
-            totalCreditTonnage: {$sum:'$tonnage'}
+            totalIncome: {$sum:'$inputamountdue'},
+            totalTonnage: {$sum:'$inputtonnage'}
         }}
         ])
 
