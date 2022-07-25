@@ -32,12 +32,12 @@ Lighter brown : #ecf39e
 
 }
 
-.landing-page {
+/* .container {
 width: 360px;
 padding: 3% 0 0;
 margin: auto;
 
-}
+} */
 .form {
 position: relative;
 z-index: 1;

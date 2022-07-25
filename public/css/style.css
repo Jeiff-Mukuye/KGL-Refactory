@@ -4,7 +4,7 @@ Global Css
 *{
     
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
+  font-size: 13.5px;
   margin: 0;
   padding: 0;
   
@@ -174,9 +174,16 @@ margin-right: 30px;
 border-radius: 10px;
 background: #f3f3f3;
 box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
-
-
+.greet h1{
+  color: #f3f3f3;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  position: relative;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-left: 300px;
+  font-size:50px;
 }
 
 .card {
@@ -190,10 +197,26 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 
 }
 
+.col-md-6{
+  box-shadow: none;
+}
+
 .card-body{
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  width: 200px;
+  border-radius: 5px;
+  margin: 10px;
+  /* background-color: #edf1c1;  */
+  color: #006B54;
+  text-align: center;
+  
 }
+.card-body:hover{
+  transform: scale(1.02);
+  background-color: #eff1d3;
+  cursor: pointer;
+}
+
+
 /*===================================
 Popup Style
 =====================================*/
