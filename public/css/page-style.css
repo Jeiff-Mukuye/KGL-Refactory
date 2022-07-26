@@ -43,7 +43,7 @@ position: relative;
 z-index: 1;
 background: #FFFFFF;
 max-width: 360px;
-margin: 0 auto 50px;
+margin: 20px auto 50px;
 padding: 30px;
 border-radius: 10px;
 text-align: left;
@@ -195,8 +195,9 @@ color: #EF3B3A;
 } */
 
 .footer-section{
-  border-top: 1px solid #BCBCBE;
   color: #9a9a9b;
+  text-align: center;
+  
   
   
 }
