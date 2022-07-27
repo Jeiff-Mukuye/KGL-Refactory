@@ -16,12 +16,12 @@ nav
   ul
     li
       a(href='/dashboard') Dashboard
-    li
-      a(href='/creditsales') Credit Form
-    li
-      a(href='/cashsales') Cash Sales Form
-    li
-      a(href='/director') Admin
+    //- li
+    //-   a(href='/creditsales') Credit Form
+    //- li
+    //-   a(href='/cashsales') Cash Sales Form
+    //- li
+    //-   a(href='/director') Admin
     //- li
     //-   a(href='/cashsalesreports') Reports
 // form section
@@ -37,12 +37,12 @@ nav
     .form-row
       .form-group.col-md-6
         label(for='inputprodname' ) Name of Item
-        input#inputprodame.form-control(type='text' name='inputprodname' value=cashsale.inputprodname placeholder='Enter Name of Item' onblur='prodNameVal(2, this, errorname)')
+        input#inputprodame.form-control(type='text' name='inputprodname' value=cashsale.inputprodname placeholder='Enter Name of Item')
         br
         span#errorname 
       .form-group.col-md-6
         label(for='inputamountpaid') Amount Paid
-        input#inputamountpaid.form-control(type='number' name='inputamountpaid' value=cashsale.inputamountpaid  placeholder='Enter Amount Paid' onblur='amountPaidVal(2, this, errorname)')
+        input#inputamountpaid.form-control(type='number' name='inputamountpaid' value=cashsale.inputamountpaid  placeholder='Enter Amount Paid')
       .form-group.col-md-6
         label(for='inputtonnage') Weight in Kilograms
         input#inputtonnage.form-control(type='number' name='inputtonnage' value=cashsale.inputtonnage placeholder='Enter kgs of produce')
